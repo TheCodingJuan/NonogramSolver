@@ -2,7 +2,7 @@
 ## Proyecto de Análisis de Algoritmos
 
 Forma de ejecución:
-``` python3 NonogramSolver.py filename ``
+` python3 NonogramSolver.py filename `
 
 Se proveen algunas entradas aquí listadas y mostrando si el programa las soluciona:
 - input_15x25.txt, SI
