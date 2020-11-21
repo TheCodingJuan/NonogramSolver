@@ -1,0 +1,241 @@
+   1   
+  22431
+ 2.....
+13.....
+ 2.....
+ 3.....
+ 2.....
+Size: 5 x 5
+About to solve Nonogram
+Solving   1   
+  22431
+ 2.....
+13.....
+ 2.....
+ 3.....
+ 2.....
+   1   
+  12431
+ 1O....
+13.....
+ 2.....
+ 3.....
+ 2.....
+2 0 { 0 0 }
+   1   
+  02431
+ 1O....
+03O....
+ 2.....
+ 3.....
+ 2.....
+
+2 0 going to check if Mark
+2 0  going to check advance in idx 
+3 0 { 0 0 }
+   1   
+  02431
+ 1O....
+03O....
+ 2X....
+ 3.....
+ 2.....
+
+3 0 going to check if Mark
+3 0  going to check advance in idx 
+4 0 { 0 0 }
+   1   
+  02431
+ 1O....
+03O....
+ 2X....
+ 3X....
+ 2.....
+
+4 0 going to check if Mark
+4 0  going to check advance in idx 
+   1   
+  02431
+ 1O....
+03O....
+ 2X....
+ 3X....
+ 2X....
+1 1 { 0 0 }
+   0   
+  02431
+ 0OO...
+03O....
+ 2X....
+ 3X....
+ 2X....
+
+1 1 going to check if Mark
+1 1  going to check advance in idx 
+   0   
+  02431
+ 0OO...
+03OX...
+ 2X....
+ 3X....
+ 2X....
+   0   
+  01431
+ 0OO...
+03OX...
+ 1XO...
+ 3X....
+ 2X....
+4 1 { 0 1 }
+   0   
+  00431
+ 0OO...
+03OX...
+ 1XO...
+ 2XO...
+ 2X....
+
+4 1 going to check if Mark
+4 1  going to check advance in idx 
+0 2 { 0 0 }
+   0   
+  00431
+ 0OO...
+03OX...
+ 1XO...
+ 2XO...
+ 2XX...
+
+0 2 going to check if Mark
+0 2  going to check advance in idx 
+   0   
+  00431
+ 0OOX..
+03OX...
+ 1XO...
+ 2XO...
+ 2XX...
+   0   
+  00331
+ 0OOX..
+02OXO..
+ 1XO...
+ 2XO...
+ 2XX...
+   0   
+  00231
+ 0OOX..
+02OXO..
+ 0XOO..
+ 2XO...
+ 2XX...
+   0   
+  00131
+ 0OOX..
+02OXO..
+ 0XOO..
+ 1XOO..
+ 2XX...
+0 3 { 0 0 }
+   0   
+  00031
+ 0OOX..
+02OXO..
+ 0XOO..
+ 1XOO..
+ 1XXO..
+
+0 3 going to check if Mark
+0 3  going to check advance in idx 
+   0   
+  00031
+ 0OOXX.
+02OXO..
+ 0XOO..
+ 1XOO..
+ 1XXO..
+2 3 { 0 0 }
+   0   
+  00021
+ 0OOXX.
+01OXOO.
+ 0XOO..
+ 1XOO..
+ 1XXO..
+
+2 3 going to check if Mark
+2 3  going to check advance in idx 
+   0   
+  00021
+ 0OOXX.
+01OXOO.
+ 0XOOX.
+ 1XOO..
+ 1XXO..
+   0   
+  00011
+ 0OOXX.
+01OXOO.
+ 0XOOX.
+ 0XOOO.
+ 1XXO..
+0 4 { 0 0 }
+   0   
+  00001
+ 0OOXX.
+01OXOO.
+ 0XOOX.
+ 0XOOO.
+ 0XXOO.
+
+0 4 going to check if Mark
+0 4  going to check advance in idx 
+   0   
+  00001
+ 0OOXXX
+01OXOO.
+ 0XOOX.
+ 0XOOO.
+ 0XXOO.
+2 4 { 0 0 }
+   0   
+  00000
+ 0OOXXX
+00OXOOO
+ 0XOOX.
+ 0XOOO.
+ 0XXOO.
+
+2 4 going to check if Mark
+2 4  going to check advance in idx 
+3 4 { 0 0 }
+   0   
+  00000
+ 0OOXXX
+00OXOOO
+ 0XOOXX
+ 0XOOO.
+ 0XXOO.
+
+3 4 going to check if Mark
+3 4  going to check advance in idx 
+4 4 { 0 0 }
+   0   
+  00000
+ 0OOXXX
+00OXOOO
+ 0XOOXX
+ 0XOOOX
+ 0XXOO.
+
+4 4 going to check if Mark
+4 4  going to check advance in idx 
+0 5 Finished nonogram
+(True, <__main__.Nonogram object at 0x7f04101b6910>)
+   0   
+  00000
+ 0OOXXX
+00OXOOO
+ 0XOOXX
+ 0XOOOX
+ 0XXOOX
