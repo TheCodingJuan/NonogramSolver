@@ -270,9 +270,9 @@ class NonogramSolver:
   # end def
     
   # -------------------------------------- 
-  # toPaintValid: Recursive method that tries to solve the nonogram. It first validates
-  #               if the game has been solved. If not it tries either to paint it or to
-  #               mark it, checking invalidation of the matrix at several moments.
+  # solveNonogram_Aux: Recursive method that tries to solve the nonogram. It first validates
+  #                    if the game has been solved. If not it tries either to paint it or to
+  #                    mark it, checking invalidation of the matrix at several moments.
   #   params:
   #    nonogram: Nonogram to validate
   #    i, j: Coordinates of the analyzed cell
