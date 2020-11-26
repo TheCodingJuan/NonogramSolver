@@ -74,7 +74,7 @@ class Nonogram:
       col = cols[i].split("|")
       colDict = []
       for c in col:
-        colDict.append({"num": int(c), "mark": False, "painted" : 0})
+        colDict.append({"num": int(c), "painted" : 0})
       # end for
       self.columns.append(colDict) 
     # end for
@@ -82,7 +82,7 @@ class Nonogram:
       row = rows[i].split("|")
       rowDict = []
       for r in row:
-        rowDict.append({"num": int(r), "mark": False, "painted" : 0})
+        rowDict.append({"num": int(r), "painted" : 0})
       # end for
       self.rows.append(rowDict) 
     # end for
@@ -162,6 +162,21 @@ class Nonogram:
       # end for
     # end with
   # end def
+
+  # --------------------------------------
+  # getDensity: Gets the painted cell density on a solved nonogram
+  # -------------------------------------- 
+  def getDensity( self ):
+    painted = 0.0
+    for i in range(len(self.matrix)):
+      for j in range(len(self.matrix[i])):
+        if self.matrix[i][j] == 1:
+          painted += 1
+        # end if
+      # end for
+    # end for
+    return painted/(len(self.rows) * len(self.columns))
+  # end def
 # end class
 
 # --------------------------------------
@@ -186,10 +201,10 @@ class NonogramSolver:
     nono.rows = nonogram.rows.copy()
     nono.columns = nonogram.columns.copy()
     for i in range(len(nono.rows)):
-      nono.rows[i].append({"num" : 0, "mark" : False, "painted" : 0})
+      nono.rows[i].append({"num" : 0, "painted" : 0})
     # end for
     for i in range(len(nono.columns)):
-      nono.columns[i].append({"num" : 0, "mark" : False, "painted" : 0})
+      nono.columns[i].append({"num" : 0, "painted" : 0})
     # end for
     row_idx = [0]*(len(nono.rows))
     col_idx = [0]*(len(nono.columns))
@@ -270,9 +285,9 @@ class NonogramSolver:
   # end def
     
   # -------------------------------------- 
-  # toPaintValid: Recursive method that tries to solve the nonogram. It first validates
-  #               if the game has been solved. If not it tries either to paint it or to
-  #               mark it, checking invalidation of the matrix at several moments.
+  # solveNonogram_Aux: Recursive method that tries to solve the nonogram. It first validates
+  #                    if the game has been solved. If not it tries either to paint it or to
+  #                    mark it, checking invalidation of the matrix at several moments.
   #   params:
   #    nonogram: Nonogram to validate
   #    i, j: Coordinates of the analyzed cell
@@ -283,7 +298,7 @@ class NonogramSolver:
   # --------------------------------------  
   def solveNonogram_Aux ( nonogram, i, j, row_idx, col_idx ):
     if NonogramSolver.finishedNonogram( nonogram ):
-      print("Finished nonogram")
+      #print("Finished nonogram")
       return True
     elif 0 <= i < len(nonogram.rows) and 0 <= j < len(nonogram.columns):
       toValidPaint = NonogramSolver.toPaintValid( nonogram, i, j, row_idx, col_idx ) 
@@ -353,23 +368,24 @@ class NonogramSolver:
 # -------------------------------------- 
 # -- TEST --
 # -------------------------------------- 
-if len(sys.argv) != 3:
-  print("Error. Usage:",sys.argv[0],"inFile outFile")
-  exit()
-# end if
-
-nono = Nonogram(sys.argv[1])
-nono.printColsRows()
-print("Size:",len(nono.rows),"x", len(nono.columns))
-print("Solving")
-result = NonogramSolver.solveNonogram( nono )
-if result[1]:
-  print("Solved!")
-  nono.saveNonogram(sys.argv[2])
+if __name__ == "__main__":
+  if len(sys.argv) != 3:
+    print("Error. Usage:",sys.argv[0],"inFile outFile")
+    exit()
+  #end if
+  nono = Nonogram(sys.argv[1])
   nono.printColsRows()
-  print("Image saved to:", sys.argv[2])
-else:
-  print("Unsolvable! Check entries.")
+  print("Size:",len(nono.rows),"x", len(nono.columns))
+  print("Solving")
+  result = NonogramSolver.solveNonogram( nono )
+  if result[1]:
+    print("Solved!")
+    nono.saveNonogram(sys.argv[2])
+    nono.printColsRows()
+    print("Image saved to:", sys.argv[2])
+  else:
+    print("Unsolvable! Check entries.")
+  # end if
 # end if
 
 # eof - NonogramSolver.py
