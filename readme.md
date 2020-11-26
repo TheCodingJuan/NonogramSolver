@@ -21,12 +21,14 @@ Se proveen algunas entradas aquí listadas y mostrando si el programa las soluci
 |input_8.txt    |SI         | 144       | 0.0070s  |
 |input_S.txt    |SI         | 150       | 0.027s   |
 |input_12.txt   |SI         | 160       | 0.0020s  |
+|input_16.txt   |SI         | 196       | 0.0010s  |
 |input_13.txt   |SI         | 196       | 0.15s    |
 |input_J.txt    |SI         | 180       | 1.88s    |
 |input_4.txt    |NO         | 204       | x        |
 |input_5.txt    |NO         | 220       | x        |
 |input_10.txt   |NO         | 225       | x        |
 |input_15.txt   |NO         | 225       | x        |
+|input_17.txt   |NO         | 225       | x        |
 |inpx.txt       |NO         | 225       | x        |
 |input_6.txt    |NO         | 238       | x        |
 |input_7.txt    |SI         | 264       | 2.52s    |
